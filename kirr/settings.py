@@ -131,3 +131,5 @@ STATICFILES_DIR = [
 
 SHORTCODE_MAX = 15
 SHORTCODE_MIN = 6
+
+django_heroku.settings(locals())
