@@ -125,5 +125,9 @@ STATIC_ROOT = 'static_cdn'
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIR = [
+	os.path.join(BASE_DIR, 'static'),
+]
+
 SHORTCODE_MAX = 15
 SHORTCODE_MIN = 6
