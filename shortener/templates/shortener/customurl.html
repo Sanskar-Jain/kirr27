@@ -1,0 +1,24 @@
+{% extends 'shortener/base.html' %}
+
+{% block title %} 
+	Shorten your URL
+{% endblock %}
+
+{% block content %}
+	<div class="form-group">
+		<form method="POST" action=".">
+			{% csrf_token %}
+			{{ form.as_p }}
+
+			{% if error %}
+				<ul>
+					<li> {{ error }}
+				<ul>
+			{% endif %}
+			<p class="lead" style="text-align: center;">
+				<input class="btn btn-secondary" type="submit" value="Shorten">
+			</p>
+			
+		</form>
+	</div>
+{% endblock %}

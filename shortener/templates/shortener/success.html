@@ -1,0 +1,18 @@
+{% extends 'shortener/base.html' %}
+
+{% block title %} 
+	<p style="text-align: center;">
+		Short URL Generated!
+	</p>
+{% endblock %}
+
+{% block content %}
+	<div class="text-center">
+		<p>URL: {{ object.url }}</p>
+		{% if object.clickevent %}
+		<p>Click Count: {{ object.clickevent.count }}</p>
+		{% endif %}
+		<p>Short URL: <a href="{{ object.get_short_url }}">{{ object.get_short_url }}</a></p>
+		<a class="btn btn-default" href="/" role="button">+ Shorten New URL</a>
+	</div>
+{% endblock %}
