@@ -21,16 +21,15 @@ pip install virtualenv
 First Clone this project to your PC.
 
 ```
-git clone 
+git clone git@github.com:Sanskar-Jain/kirr27.git
 ```
 then go into that directory and install the requirements.
 ```
-cd 
+cd kirr27
 pip install -r requirements.txt
 ```
 Then create a super user
 ```
-cd src
 python manage.py createsuperuser
 ```
 Fill the name,email and password and then runserver
